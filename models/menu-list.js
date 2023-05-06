@@ -47,7 +47,7 @@ desc:"Comes with different meats",
 price:13.99,
 servings:2,
 cookingTime:25,
-imageUrl:"meatBalls.jpg",
+imageUrl:"meatballs.jpg",
 catogery:"Classic",
 top:true
 },
@@ -69,7 +69,7 @@ top:true
     price:13.99,
     servings:2,
     cookingTime:25,
-    imageUrl:"caesar.jpg",
+    imageUrl:"cesarsalad.jpg",
     catogery:"Classic",
     top:true
 },
