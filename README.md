@@ -10,4 +10,4 @@ Course/Section: WEB322/NEE
 
 ## Project URLs
 GitHub Repo   :https://github.com/NamandeepWadhwa/web322-nwadhwa2..git
-Cyclic URL    : https://beige-bullfrog-yoke.cyclic.app/
+Cyclic URL    :https://web322-nwadhwa2-production.up.railway.app/
