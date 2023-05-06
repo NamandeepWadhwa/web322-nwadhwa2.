@@ -1,0 +1,61 @@
+{{#if message}}
+<div class="row p-5 text-danger fs-2"> {{message}}</div>
+{{/if}}
+
+
+{{#if hasmeal}}
+<div class="row m-5 pb-5  clerk-list">
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Extended Price</th>
+      <th scope="col">Add one more</th>
+      <th scope="col">Remove one more</th>
+      <th scope="col">Remove meal</th>
+    </tr>
+  </thead>
+ <tbody>
+
+            {{#each meal}}
+            
+    <tr>
+     
+      <td>{{meal.title}}</td>
+      <td>{{meal.price}}</td>
+      <td>{{qty}}</td>
+      <td>{{ExtentedPrice}}</td>
+      <td><a href="/customer/add-meal/:{{meal.title}}">Add one</a></td>
+      <td><a href="/customer/RemoveOne-meal/:{{meal.title}}">Remove one</a></td>
+      <td><a href="/customer/remove-meal/:{{meal.title}}">Remove meal</a></td>
+    </tr>
+            {{/each}}
+            </tbody>
+            
+        
+        
+     <tbody>
+        <tr>
+        <td>Cart total</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+            <td>{{cartTotal}}</td>
+        </tr>
+     </tbody>
+     
+        
+        </table>
+        </div>
+<div class="price pb-5 d-flex align-items-end flex-column mx-3">
+<a href="/customer/order" class="p-2">Place order</a>
+</div>
+{{else}}
+<h3 class="p-5 text-danger">Start adding order</h3>
+{{/if}}
+
+

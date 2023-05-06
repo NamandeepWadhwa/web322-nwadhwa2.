@@ -1,0 +1,19 @@
+  {{#each menu}}
+  
+ <h1 class="text-center">{{catogery}}</h1>
+ 
+    <div class="row mx-5 d-flex justify-content-center  my-5">
+         {{#each mealKits}}
+         
+           <div class="col-12 col-sm-5 p-4 mx-5">
+            
+            {{>mealkit this}}
+           
+           </div>
+           
+           {{/each}}
+           
+     
+    </div>
+    
+     {{/each}}

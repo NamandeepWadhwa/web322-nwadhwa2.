@@ -1,0 +1,11 @@
+{{>hero}}
+ <h1 class="text-center">Top selling meals</h1>
+    <div class="row mx-3  my-5">
+          {{#each menu}}
+          {{#if top}}
+           <div class="col-12 col-md-4 col-sm-6 p-2">
+            {{>mealkit this}}
+           </div>
+           {{/if}}
+      {{/each}}
+    </div>

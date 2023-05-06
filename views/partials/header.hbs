@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg">
+        <div class="container-fluid mx-5">
+          <a class="navbar-brand" href="/"><img src="/images/logo.png" style="width: 150px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                
+              <li class="nav-item mx-3 my-2">
+                <a class="nav-link text-decoration-none text-danger fs-5" href="/">Home</a>
+              </li>
+              <li class="nav-item mx-3 my-2">
+                <a class="nav-link text-decoration-none text-danger fs-5" href="/menu">Menu</a>
+              </li>
+              {{#if user}}
+              
+                 <li class="nav-item mx-3 my-2 ">
+                  <span class="nav-link fs-5 text-danger"> {{user.firstName}} {{user.lastName}}</span></li>
+                  {{#compare check}}  {{/compare}}
+                  <li class="nav-item mx-3 my-2">
+                <a class="nav-link fs-5 text-danger" href="/user/logout">Logout</a>
+              </li>
+                  {{else}}
+              <li class="nav-item mx-3 my-2">
+                <a class="nav-link fs-5 text-danger" href="/user/login">Login</a>
+              </li>
+              <li class="nav-item  mx-3 my-2">
+                <a class="nav-link fs-5 text-danger" href="/user/sign-up">Sign-up</a>
+              </li>
+              {{/if}}
+             </ul>
+          </div>
+        </div>
+    </nav>

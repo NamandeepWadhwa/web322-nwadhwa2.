@@ -1,0 +1,35 @@
+<h2 class="py-3">Add a new mealkit</h2>
+<span><h3 class="py-3 text-danger">{{message}}</h3></span>
+
+<form method="POST" action="/clerk/add-mealkit/{{values._id}}" enctype="multipart/form-data">
+    <label for="title" class=" mx-3">Title</label>
+    <input type="text" class=" mx-3" name="title" id="title" value="{{values.title}}"><br><br>
+
+    <label for="desc" class=" mx-3">Description</label>
+    <input type="text" class=" mx-3" name="desc" id="desc" value="{{values.desc}}"><br /><br />
+
+    <label for="include" class=" mx-3">Include</label>
+    <input type="text"class=" mx-3" name="includes" id="includes" value="{{values.includes}}"><br><br />
+
+    <label for="servings" class=" mx-3">Servings</label>
+    <input type="servings" class=" mx-3" name="servings" id="servings" value="{{values.servings}}"><br /><br />
+
+     <label for="category" class=" mx-3">Category</label>
+    <input type="category" class=" mx-3" name="catogery" id="catogery" value="{{values.catogery}}"><br /><br />
+
+         <label for="cookingTime" class=" mx-3">Cooking Time</label>
+    <input type="cookingTime" class=" mx-3" name="cookingTime" id="cookingTime" value="{{values.cookingTime}}"><br /><br />
+
+         <label for="price" class=" mx-3">Price</label>
+    <input type="price" class=" mx-3" name="price" id="price" value="{{values.price}}"><br /><br />
+
+      <label class=" mx-3" for="vehicle1"> Top meal(true/false)?</label>
+      <input class=" mx-3" type="checkbox" name="top" value="topmeal"><br><br>
+
+    <label for="MealPic" class=" mx-3">Picture:</label>
+    <input type="file" class=" mx-3" name="MealPic" id="MealPic"><br /><br />
+       
+  
+
+    <input type="submit" class="my-3 mx-3" value="Submit" />
+</form>

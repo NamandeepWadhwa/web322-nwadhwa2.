@@ -1,0 +1,48 @@
+
+
+<div class="conatiner mx-auto pt-4 pb-5 mb-5 d-flex justify-content-center text-primary" style= "background-color: rgba(223, 221, 221, 0.812); max-width:400px;">
+   
+    
+    
+   <form  class="col-6   fs-5" method="post" action="/user/login">
+   
+    <div class="row text-center fs-3"><p>
+        Login
+    </p></div>
+     {{#each errors}}
+    <span class="text-danger">*{{this}}</span><br>
+    {{/each}}
+   <label class="row  fs-4 pb-3" for="emali">Email</label>
+    <input  class="row border border-primary p-3" type="text" placeholder="example@some.com"id="email" name="email" value={{values.email}}>
+     {{#if validationMessages.email}}
+    <span class="text-danger">*{{validationMessages.email}}</span><br>
+    {{/if}}
+    <label class="row pb-3 fs-4"for="password">Password</label>
+    <input class="row  border border-primary p-3" type="text" placeholder="********" id="password"name="password" value={{values.password}}>
+     {{#if validationMessages.password}}
+    <span class="text-danger flex-row-reverse ">*{{validationMessages.password}}</span><br>
+    {{/if}}
+    
+    <input type="radio" id="clerk" name="check" value=clerk />
+      <label for="clerk">Clerk</label>
+ 
+      <input type="radio" id="customer" name="check" value=customer>
+      <label for="customer">Customer</label>
+{{#if validationMessages.radio}}
+    <span class="text-danger flex-row-reverse ">*{{validationMessages.radio}}</span><br>
+    {{/if}}
+    
+
+    <button class="d-flex flex-row-reverse mt-4 p-3 btn btn-outline-primary" type="submit">Login </button>
+   
+    
+   
+   </form>
+    
+    
+    
+
+ 
+
+
+</div>

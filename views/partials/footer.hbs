@@ -1,0 +1,42 @@
+ <div class="footer ">
+        <div class="row mx-3">
+            <div class="col-6 col-sm-6 ">
+                <p class="fs-5 py-3">Copyright © Fall 2022, Namandeep Singh Wdhwa, WEB322 section NEE</p>
+                <p class="fs-2 py-5">Have more questions contact us on quickAP@gmail.com</p>
+            </div>
+               <div class="col-6 col-sm ">
+                <p class="fs-4 py-3">Quick links</p>
+                <ul >
+                    <li class="py-2 fs-4 text-danger"><a class="text-decoration-none text-danger" href="/">Home</a></li>
+                    <li class="py-2 fs-4 text-danger"><a class="text-decoration-none text-danger" href="/menu">Menu</a></li>
+                    {{#if user}}
+                     {{#compareheader user.check}}  {{/compareheader}}
+                  <li class="py-2 fs-4 text-danger">
+                <a class="text-decoration-none text-danger" href="/user/logout">Logout</a>
+              </li>
+                  {{else}}
+              <li class="py-2 fs-4 text-danger">
+                <a class="text-decoration-none text-danger" href="/user/login">Login</a>
+              </li>
+              <li class="py-2 fs-4 text-danger">
+                <a class="text-decoration-none text-danger" href="/user/sign-up">Sign-up</a>
+              </li>
+              {{/if}}
+                   
+                </ul>
+                
+            </div>
+               <div class="col-6 col-sm ">
+                  <p class="fs-4 py-3">Follow us on</p>
+                  <ul >
+                    <li class="py-2 fs-4 text-danger"><a class="text-decoration-none text-danger" href="">Instagram</a></li>
+                    <li class="py-2 fs-4 text-danger"><a class="text-decoration-none text-danger" href="">Facebook</a></li>
+                    <li class="py-2 fs-4 text-danger"><a class="text-decoration-none text-danger" href="">Youtube</a></li>   
+                  </ul>
+                
+              
+                </div>
+        </div>
+       
+
+    </div>

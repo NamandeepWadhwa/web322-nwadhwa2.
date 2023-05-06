@@ -1,0 +1,48 @@
+
+
+<div class="conatiner mx-auto pt-4 pb-5 mb-5 d-flex justify-content-center text-primary" style= "background-color: rgba(223, 221, 221, 0.812); max-width:700px;">
+   
+    
+    
+   <form  class="col-6   fs-5" method="post" action="/user/sign-up">
+    <div class="row text-center fs-3"><p>
+        Sigh up
+    </p></div>
+     
+    <div class="row text-center pb-3">Sigh-up today by entring your mail and by choosing your password</div>
+    {{#if errors}}
+    <span class="text-danger">*{{errors}}</span><br>
+    {{/if}}
+    <label class="row  fs-4 pb-3" for="firstname">First Name</label>
+    <input  class="row border border-primary p-3" type="text" placeholder="ABCDEF"id="firstname" name="firstname" value={{values.firstname}}>
+     {{#if validationMessages.firstname}}
+    <span class="text-danger">*{{validationMessages.firstname}}</span><br>
+    {{/if}}
+    <label class="row  fs-4 pb-3" for="lastname">Last Name</label>
+    <input  class="row border border-primary p-3" type="text" placeholder="ABCDEF"id="lastname"name="lastname" value={{values.lastname}}>
+     {{#if validationMessages.lastname}}
+    <span class="text-danger">*{{validationMessages.lastname}}</span><br>
+    {{/if}}
+   <label class="row  fs-4 pb-3" for="emali">Email</label>
+    <input  class="row border border-primary p-3" type="text" placeholder="example@some.com"id="email" name="email" value={{values.email}}>
+     {{#if validationMessages.email}}
+    <span class="text-danger">*{{validationMessages.email}}</span><br>
+    {{/if}}
+    <label class="row pb-3 fs-4"for="password">Password</label>
+    <input class="row  border border-primary p-3" type="text" placeholder="********" id="password"name="password" value={{values.password}}>
+     {{#if validationMessages.password}}
+    <span class="text-danger flex-row-reverse ">*{{validationMessages.password}}</span><br>
+    {{/if}}
+    <button class="d-flex flex-row-reverse mt-4 p-3 btn btn-outline-primary" type="submit">Sign-up </button>
+   
+    
+   
+   </form>
+    
+    
+    
+
+ 
+
+
+</div>
